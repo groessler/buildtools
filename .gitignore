@@ -1,0 +1,8 @@
+/config/.history
+/installer-tmp
+/vendor/android-ndk
+/vendor/nacl_sdk
+/vendor/emsdk
+*.pyc
+/src
+/packages
