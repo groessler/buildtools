@@ -56,6 +56,20 @@
         @cd /d "%HOME%"
     )
 )
+@if not exist %CMDER_ROOT%\vendor\qt\mingw32\Qt\bin\qt.conf  (
+@echo Setup QT mingw32
+@echo ================
+@cd %CMDER_ROOT%\vendor\qt\mingw32
+@call setup-Qt.bat 
+@cd %CMDER_ROOT%
+)
+@if not exist %CMDER_ROOT%\vendor\qt\mingw64\Qt\bin\qt.conf  (
+@echo Setup QT mingw64
+@echo ================
+@cd %CMDER_ROOT%\vendor\qt\mingw64
+@call setup-Qt.bat 
+@cd %CMDER_ROOT%
+)
 @set DXSDK_DIR=%CMDER_ROOT%\vendor\dxsdk
 @set ANDROID_NDK_ROOT=%CMDER_ROOT%\vendor\android-ndk
 @set ANDROID_NDK_ARM=%CMDER_ROOT%\vendor\android-ndk\toolchains\arm-linux-androideabi-4.9\prebuilt\windows
