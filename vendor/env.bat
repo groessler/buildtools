@@ -9,39 +9,14 @@
 
 :: Enhance Path
 @set git_install_root=%CMDER_ROOT%\vendor\msysgit
-@set MINGW32=
-@set MINGW64=
-@set MINGW_PATH=
-@set MINGW32_PATH=
-@set MINGW64_PATH=
+@set MINGW32=%CMDER_ROOT%\vendor\mingw32
+@set MINGW64=%CMDER_ROOT%\vendor\mingw64
+
 @if "%PROCESSOR_ARCHITECTURE%"=="x86" (
-	@if exist %CMDER_ROOT%\vendor\mingw32\bin (
-		set MINGW32_PATH=%CMDER_ROOT%\vendor\mingw32\bin
-		set MINGW32=%CMDER_ROOT%\vendor\mingw32
-		set MINGW_PATH=%CMDER_ROOT%\vendor\mingw32\bin
-	)
+	@call %CMDER_ROOT%\bin\config32.bat
 ) else (
-	@if exist %CMDER_ROOT%\vendor\mingw32\bin (
-		set MINGW32_PATH=%CMDER_ROOT%\vendor\mingw32\bin	
-		set MINGW32=%CMDER_ROOT%\vendor\mingw32
-		set MINGW_PATH=%CMDER_ROOT%\vendor\mingw32\bin
-	)
-	@if exist %CMDER_ROOT%\vendor\mingw64\bin (
-		set MINGW64_PATH=%CMDER_ROOT%\vendor\mingw64\bin
-		set MINGW64=%CMDER_ROOT%\vendor\mingw64
-		set MINGW_PATH=%CMDER_ROOT%\vendor\mingw64\bin
-	)	
+	@call %CMDER_ROOT%\bin\config64.bat
 )
-@if "%PROCESSOR_ARCHITECTURE%"=="x86" (
-	@if exist %CMDER_ROOT%\vendor\qt\mingw32 (
-		set MINGW_PATH=%MINGW_PATH%;%CMDER_ROOT%\vendor\qt\mingw32\Qt\bin
-	)
-) else (
-	@if exist %CMDER_ROOT%\vendor\qt\mingw64 (
-		set MINGW_PATH=%MINGW_PATH%;%CMDER_ROOT%\vendor\qt\mingw64\Qt\bin
-	)
-)
-@set PATH=%CMDER_ROOT%\bin;%CMDER_ROOT%\vendor\unixtools;%git_install_root%\cmd;%git_install_root%\share\vim\vim74;%CMDER_ROOT%;%MINGW_PATH%;%CMDER_ROOT%\vendor\python;C:\Windows\System32;C:\Windows
 
 :: Add aliases
 @doskey /macrofile="%CMDER_ROOT%\config\aliases"
