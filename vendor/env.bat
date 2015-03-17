@@ -14,8 +14,10 @@
 
 @if "%PROCESSOR_ARCHITECTURE%"=="x86" (
 	@call %CMDER_ROOT%\bin\config32.bat
+	@set MINGW=%MINGW32%
 ) else (
 	@call %CMDER_ROOT%\bin\config64.bat
+	@set MINGW=%MINGW64%
 )
 
 :: Add aliases
