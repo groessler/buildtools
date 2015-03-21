@@ -53,6 +53,6 @@
 @set ANDROID_NDK_MIPS=%CMDER_ROOT%\vendor\android-ndk\toolchains\mipsel-linux-android-4.9\prebuilt\windows
 @set ANDROID_NDK_X86=%CMDER_ROOT%\vendor\android-ndk\toolchains\x86-4.9\prebuilt\windows
 @set EMSCRIPTEN=%CMDER_ROOT%\vendor\emsdk\emscripten\1.29.0
-@set NACL_SDK_ROOT=%CMDER_ROOT%\vendor\nacl_sdk\pepper_40
+@set NACL_SDK_ROOT=%CMDER_ROOT%\vendor\nacl_sdk\pepper_41
 @set CLANG=%CMDER_ROOT%\vendor\LLVM
 @set CYGWIN=nodosfilewarning
