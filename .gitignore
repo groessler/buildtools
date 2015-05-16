@@ -4,6 +4,7 @@
 /vendor/nacl_sdk
 /vendor/emsdk
 *.pyc
+*.pyo
 /src
 /packages
 qt.conf
