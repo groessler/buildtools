@@ -3,6 +3,8 @@
 /vendor/android-ndk
 /vendor/nacl_sdk
 /vendor/emsdk
+/vendor/python/Lib/site-packages
+/vendor/python/Scripts
 *.pyc
 *.pyo
 /src
